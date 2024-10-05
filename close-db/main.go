@@ -32,7 +32,7 @@ var mdbClient *mongo.Client
 func main() {
 	const serverAddr string = "127.0.0.1:8081"
 	// TODO: Replace with your connection string
-	const connStr string = "mongodb+srv://malikrtamboli:763YmElFWeCO3TAV@testclust.ucq1m.mongodb.net/?retryWrites=true&w=majority&appName=testClust"
+	const connStr string = "mongodb+srv://malikrtamboli:yourpass@testclust.ucq1m.mongodb.net/?retryWrites=true&w=majority&appName=testClust"
 	done := make(chan struct{})
 
 	fmt.Println("Hola Caracola")
