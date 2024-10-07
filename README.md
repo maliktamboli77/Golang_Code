@@ -1,1 +1,1 @@
-//---This is sample golang programs for devops---//
+This is golang programs in testing
