@@ -1,1 +1,1 @@
-This is golang programs in testing
+These are Go programs for testing purposes.
