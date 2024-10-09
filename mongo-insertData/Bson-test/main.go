@@ -24,7 +24,7 @@ type Student struct {
 
 func main() {
 	// Connection URI
-	uri := "mongodb+srv://malikrtamboli:763YmElFWeCO3TAV@testclust.ucq1m.mongodb.net/?retryWrites=true&w=majority&appName=testClust"
+	uri := "mongodb+srv://malikrtamboli:yourpass@testclust.ucq1m.mongodb.net/?retryWrites=true&w=majority&appName=testClust"
 
 	// Connect to MongoDB
 	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(uri))
