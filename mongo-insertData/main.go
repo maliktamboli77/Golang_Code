@@ -13,7 +13,7 @@ import (
 
 func main() {
 	//Connection URI
-	uri := "mongodb+srv://malikrtamboli:Password@testclust.ucq1m.mongodb.net/?retryWrites=true&w=majority&appName=testClust"
+	uri := "mongodb+srv://malikrtamboli:763YmElFWeCO3TAV@testclust.ucq1m.mongodb.net/?retryWrites=true&w=majority&appName=testClust"
 
 	//Set a timeout context for mongoDb operations
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
@@ -24,6 +24,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	clientOptions := options.Client()
+	clientOptions.SetMaxPoolSize(5)
 	defer client.Disconnect(ctx)
 
 	//Check the connection
@@ -39,10 +41,10 @@ func main() {
 	collection := database.Collection("Personinfo")
 
 	sampleData := bson.D{
-		{Key: "name", Value: "Robert Downey Jr"},
-		{Key: "age", Value: 50},
-		{Key: "city", Value: "New York"},
-		{Key: "company", Value: "Stark industries"},
+		{Key: "name", Value: "Bruce wayne"},
+		{Key: "age", Value: 45},
+		{Key: "city", Value: "Gotham"},
+		{Key: "company", Value: "Wayn Enterprises"},
 	}
 
 	insertResult, err := collection.InsertOne(ctx, sampleData)
