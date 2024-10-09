@@ -42,6 +42,7 @@ func main() {
 	}
 	fmt.Println("Connected to MongoDB!")
 
+	// Database create and insert some data
 	coll := client.Database("db").Collection("students")
 
 	address1 := Address{"1 Main Road", "Dighanchi", "MH"}
@@ -51,7 +52,7 @@ func main() {
 	if err != nil {
 		log.Fatal("Insertion err", err)
 	}
-
+	// Print acknowledgement of inserted database:
 	fmt.Printf("Inserted document with ID: %v\n", insertRes.InsertedID)
 
 }
