@@ -41,10 +41,10 @@ func main() {
 	collection := database.Collection("Personinfo")
 
 	sampleData := bson.D{
-		{Key: "name", Value: "Bruce wayne"},
-		{Key: "age", Value: 45},
-		{Key: "city", Value: "Gotham"},
-		{Key: "company", Value: "Wayn Enterprises"},
+		{Key: "name", Value: "Peter Parker"},
+		{Key: "age", Value: 27},
+		{Key: "city", Value: "New York"},
+		{Key: "company", Value: "Parker sons"},
 	}
 
 	insertResult, err := collection.InsertOne(ctx, sampleData)
