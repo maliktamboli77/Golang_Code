@@ -15,7 +15,7 @@ func main() {
 	//Connection URI
 	uri := "mongodb+srv://malikrtamboli:763YmElFWeCO3TAV@testclust.ucq1m.mongodb.net/?retryWrites=true&w=majority&appName=testClust"
 
-	//Set a timeout context for mongoDb operations
+	//Set a timeout context for mongoDB operations
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 
