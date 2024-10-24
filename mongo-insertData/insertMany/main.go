@@ -37,9 +37,9 @@ func main() {
 
 	// Define multiple documents to insert
 	documents := []interface{}{
-		bson.D{{"name", "Malik"}, {"age", 27}},
-		bson.D{{"name", "Akash"}, {"age", 27}},
-		bson.D{{"name", "Bob"}, {"age", 25}},
+		bson.D{{"name", "Malik Tamboli"}, {"age", 27}},
+		bson.D{{"name", "Akash Jadhav"}, {"age", 27}},
+		bson.D{{"name", "Bob Marley"}, {"age", 25}},
 	}
 
 	// Insert multiple documents
